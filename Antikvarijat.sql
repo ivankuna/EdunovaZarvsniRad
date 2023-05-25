@@ -103,16 +103,6 @@ create table otkup_stavka (
 	foreign key (id_knjiga) references knjiga (id_knjiga)
 );
 
-create table otkup_stavka_temp (
-	id_otkup_stavka_temp int not null primary key auto_increment,
-	id_otkup_zaglavlje int not null,
-	id_knjiga int not null,
-	kolicina int not null,
-	cijena_otkupa decimal(12,2) not null,
-	foreign key (id_otkup_zaglavlje) references otkup_zaglavlje (id_otkup_zaglavlje),
-	foreign key (id_knjiga) references knjiga (id_knjiga)
-);
-
 create table prodaja_zaglavlje (
 	id_prodaja_zaglavlje int not null primary key auto_increment,
 	broj_prodaje varchar(20) not null,
@@ -129,16 +119,6 @@ create table prodaja_zaglavlje (
 
 create table prodaja_stavka (
 	id_prodaja_stavka int not null primary key auto_increment,
-	id_prodaja_zaglavlje int not null,
-	id_knjiga int not null,
-	kolicina int not null,
-	cijena_prodaje decimal(12,2) not null,
-	foreign key (id_prodaja_zaglavlje) references prodaja_zaglavlje (id_prodaja_zaglavlje),
-	foreign key (id_knjiga) references knjiga (id_knjiga)
-);
-
-create table prodaja_stavka_temp (
-	id_prodaja_stavka_temp int not null primary key auto_increment,
 	id_prodaja_zaglavlje int not null,
 	id_knjiga int not null,
 	kolicina int not null,
