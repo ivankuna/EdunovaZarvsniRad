@@ -67,8 +67,8 @@ insert into otkup_stavka (id_otkup_zaglavlje, id_knjiga, kolicina, cijena_otkupa
 (1, 2, 3, 30),
 (2, 3, 2, 20);
 
--- Unos zapisa u tablicu otkup_stavka_temp
-insert into otkup_stavka_temp (id_otkup_zaglavlje, id_knjiga, kolicina, cijena_otkupa) values
+-- Unos zapisa u tablicu otkup_stavka
+insert into otkup_stavka (id_otkup_zaglavlje, id_knjiga, kolicina, cijena_otkupa) values
 (1, 1, 2, 20),
 (2, 2, 1, 10),
 (3, 3, 4, 40);
@@ -85,8 +85,8 @@ insert into prodaja_stavka (id_prodaja_zaglavlje, id_knjiga, kolicina, cijena_pr
 (1, 2, 1, 50),
 (2, 3, 3, 150);
 
--- Unos zapisa u tablicu prodaja_stavka_temp
-insert into prodaja_stavka_temp (id_prodaja_zaglavlje, id_knjiga, kolicina, cijena_prodaje) values
+-- Unos zapisa u tablicu prodaja_stavka
+insert into prodaja_stavka (id_prodaja_zaglavlje, id_knjiga, kolicina, cijena_prodaje) values
 (1, 1, 1, 50),
 (2, 2, 2, 100),
 (3, 3, 2, 80);
@@ -109,8 +109,8 @@ update otkup_stavka
 set cijena_otkupa = 25
 where id_otkup_zaglavlje = 1 and id_knjiga = 1;
 
--- Brisanje zapisa u tablici prodaja_stavka_temp
-delete from prodaja_stavka_temp where id_prodaja_stavka_temp = 1;
+-- Brisanje zapisa u tablici prodaja_stavka
+delete from prodaja_stavka where id_prodaja_stavka = 1;
 
 -- Brisanje zapisa u tablici prodaja_stavka
 delete from prodaja_stavka where id_prodaja_stavka = 1;
